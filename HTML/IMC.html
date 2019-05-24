@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+<meta charset="UTF-8">
+
+<head>  
+<script type="text/javascript">
+function CalculoImc(){
+var peso = parseFloat(document.formImc.peso.value);
+var altura = parseFloat(document.formImc.altura.value);
+var imc = peso/(altura*altura);
+document.formImc.resultado.value = imc.toFixed(2);
+
+	if (imc < 16.9){
+    	alert("Muito abaixo do peso. Seu IMC é " + imc.toFixed(2));
+    } else if (imc >= 16.9 && imc <= 18.5 ){
+    	alert("Abaixo do peso. Seu IMC é " + imc.toFixed(2));
+    } else if (imc >= 18.5 && imc <= 24.9){
+    	alert ("Peso normal. Seu IMC é " + imc.toFixed(2));
+    } else if (imc >= 25.0 && imc <= 29.9){
+    	alert ("Acima do peso. Seu IMC é " + imc.toFixed(2));
+    } else if (imc >= 30.0 && imc <= 34.9){
+    	alert ("Obesidade Grau I. Seu IMC é " + imc.toFixed(2));
+    } else if (imc >= 35.0 && imc <= 40.0){
+    	alert ("Obesidade Grau II. Seu IMC é " + imc.toFixed(2));
+    } else {
+    	alert ("Obesidade Grau III. Seu IMC é " + imc.toFixed(2));
+    }
+}
+  
+</script>
+
+</head>
+<body>
+<p><strong>CÁLCULO DE IMC (Índice de Massa Corpórea)</strong></p><br>
+
+<form action="imc.html" name="formImc" method="post">
+
+<p>Peso (em kg): <input type="text" name="peso"></p>
+<p>Altura (em m): <input type="text" name="altura"></p>
+<p><input type="button" value="Calcular" onclick="CalculoImc();">
+<input type="reset" value="Limpar"></p>
+<p>Resultado: <input type="text" name="resultado"></p>
+
+</form>
+	
+</body>
+</html>
