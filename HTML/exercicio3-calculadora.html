@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+	<meta charset="utf-8"/>
+	<title>Calculadora Exercicio 3</title>
+  <link href="css/exercicios3-calculadora.css" rel="stylesheet" type="text/css">
+
+<body>
+
+  <form name="calculadora">
+
+    <input type="textfield" name="eae" value="">
+    <br>
+
+    <input type="button" value="1" onClick="document.calculadora.eae.value+='1'">
+    <input type="button" value="2" onClick="document.calculadora.eae.value+='2'">
+    <input type="button" value="3" onClick="document.calculadora.eae.value+='3'">
+    <input type="button" value="+" onClick="document.calculadora.eae.value+='+'">
+    <br>
+    <input type="button" value="4" onClick="document.calculadora.eae.value+='4'">
+    <input type="button" value="5" onClick="document.calculadora.eae.value+='5'">
+    <input type="button" value="6" onClick="document.calculadora.eae.value+='6'">
+    <input type="button" value="-" onClick="document.calculadora.eae.value+='-'">
+    <br>
+    <input type="button" value="7" onClick="document.calculadora.eae.value+='7'">
+    <input type="button" value="8" onClick="document.calculadora.eae.value+='8'">
+    <input type="button" value="9" onClick="document.calculadora.eae.value+='9'">
+    <input type="button" value="*" onClick="document.calculadora.eae.value+='*'">
+    <br>
+    <input type="button" value="0" onClick="document.calculadora.eae.value+='0'">
+    <input type="reset" value="c">
+    <input type="button" value="/" onClick="document.calculadora.eae.value+='/'">
+    <input type="button" value="=" onClick="document.calculadora.eae.value=eval(document.calculadora.eae.value)">
+    </form>
+</body>
+</html>
